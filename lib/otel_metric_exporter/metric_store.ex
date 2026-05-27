@@ -258,7 +258,7 @@ defmodule OtelMetricExporter.MetricStore do
              value: {:as_int, value}
            }
          end),
-       aggregation_temporality: :AGGREGATION_TEMPORALITY_CUMULATIVE,
+       aggregation_temporality: :AGGREGATION_TEMPORALITY_DELTA,
        is_monotonic: true
      }}
   end
@@ -275,7 +275,7 @@ defmodule OtelMetricExporter.MetricStore do
              value: {:as_int, value}
            }
          end),
-       aggregation_temporality: :AGGREGATION_TEMPORALITY_CUMULATIVE,
+       aggregation_temporality: :AGGREGATION_TEMPORALITY_DELTA,
        is_monotonic: false
      }}
   end
@@ -322,7 +322,7 @@ defmodule OtelMetricExporter.MetricStore do
              explicit_bounds: bucket_bounds
            }
          end),
-       aggregation_temporality: :AGGREGATION_TEMPORALITY_CUMULATIVE
+       aggregation_temporality: :AGGREGATION_TEMPORALITY_DELTA
      }}
   end
 
